@@ -1,0 +1,21 @@
+Write a program for Binary Search using recursive functions
+def binary_search(arr, low, high, x):
+    """
+    Performs binary search on a sorted array arr to find the index of element x.
+    :param arr: A sorted array of integers.
+    :param low: The lower index of the search range.
+    :param high: The upper index of the search range.
+    :param x: The element to search for in the array.
+    :return: The index of x in the array if it exists, otherwise -1.
+    """
+    if low <= high:
+        mid = (low + high) // 2
+
+        if arr[mid] == x:
+            return mid
+        elif arr[mid] > x:
+            return binary_search(arr, low, mid - 1, x)
+        else:
+            return binary_search(arr, mid + 1, high, x)
+    else:
+        return -1
