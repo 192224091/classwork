@@ -1,0 +1,30 @@
+Write a program to guessing a number by the user against computer generated one using do while loop
+import java.util.*;
+
+public class GuessingGame {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        Random rand = new Random();
+        int numberToGuess = rand.nextInt(100) + 1; // generates a random number between 1 and 100
+        int numGuesses = 0;
+        int guess;
+
+        System.out.println("Welcome to the guessing game!");
+        System.out.println("I'm thinking of a number between 1 and 100...");
+        do {
+            System.out.print("Enter your guess: ");
+            guess = input.nextInt();
+            numGuesses++;
+
+            if (guess < numberToGuess) {
+                System.out.println("Too low! Guess again.");
+            } else if (guess > numberToGuess) {
+                System.out.println("Too high! Guess again.");
+            } else {
+                System.out.println("Congratulations! You guessed the number in " + numGuesses + " tries.");
+            }
+        } while (guess != numberToGuess);
+
+        input.close();
+    }
+}
