@@ -1,0 +1,12 @@
+Program to add two numbers using Function with arguments and with return value
+def add_numbers(num1, num2):
+    # Add two numbers and return the result
+    return num1 + num2
+
+# Prompt the user to enter two numbers
+num1 = int(input("Enter the first number: "))
+num2 = int(input("Enter the second number: "))
+
+# Call the function and print the result
+result = add_numbers(num1, num2)
+print("The sum of", num1, "and", num2, "is", result)
