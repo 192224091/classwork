@@ -1,0 +1,28 @@
+# define the grading scale ranges
+grading_scale = {'A': (90, 100), 'B': (78, 89), 'C': (65, 77), 'D': (50, 64), 'F': (0, 49)}
+
+# get the number of students from user input
+n = int(input("Enter No. Students: "))
+
+# create an empty list to store the details of each student
+students = []
+
+# loop through each student and get their details from user input
+for i in range(n):
+    student_details = {}
+    student_details['Number'], student_details['Grade'] = input(f"Enter student {i+1} Number, Grade: ").split(',')
+    students.append(student_details)
+
+# calculate the total number of As, Bs, Cs, Ds, and Fs
+total_grades = {'A': 0, 'B': 0, 'C': 0, 'D': 0, 'F': 0}
+for student in students:
+    grade_range = grading_scale[student['Grade'].strip()]
+    if int(grade_range[0]) <= int(student['Number']) <= int(grade_range[1]):
+        total_grades[student['Grade'].strip()] += 1
+
+# print the details of each student and the total number of As, Bs, Cs, Ds, and Fs
+for i, student in enumerate(students):
+    print(f"Student {i+1} details:")
+    print(f"Number: {student['Number']}")
+    print(f"Grade: {student['Grade'].strip()}")
+    print(f"Total no. A: {total_grades['A']}, B: {total_grades['B']}, C: {total_grades['C']}, D: {total_grades['D']}, F: {total_grades['F']}")
