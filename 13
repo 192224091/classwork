@@ -1,0 +1,28 @@
+Find out the error and show the output
+
+            main()
+{
+	int i=1,sum=0;
+	clrscr();
+printf(“Enter the values for n:”);
+scanf(“%d”,n);
+while(i<=n)
+{
+sum==sum+i;
+i++;
+}
+printf(“The sum of n numbers is”,sum);
+}#include <stdio.h>
+#include <stdlib.h>
+
+int main() {  // Declare main() with a return type of int.
+    int i = 1, sum = 0, n;  // Declare and initialize the 'n' variable.
+    printf("Enter the value for n: ");
+    scanf("%d", &n);  // Read the value for 'n' from the user input.
+    while (i <= n) {
+        sum = sum + i;  // Use the assignment operator to add the 'i' value to 'sum'.
+        i++;
+    }
+    printf("The sum of %d numbers is %d\n", n, sum);  // Add a placeholder for the 'sum' value and print the sum.
+    return 0;  // Return a value of 0 to indicate successful program execution.
+}
