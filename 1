@@ -1,0 +1,21 @@
+python_marks = int(input("Enter the marks in python: "))
+c_marks = int(input("Enter the marks in c programming: "))
+maths_marks = int(input("Enter the marks in Mathematics: "))
+physics_marks = int(input("Enter the marks in Physics: "))
+
+total = python_marks + c_marks + maths_marks + physics_marks
+aggregate = total / 4.0
+
+print("Total=", total)
+print("Aggregate =", aggregate)
+
+if aggregate >= 75:
+    print("DISTINCTION")
+elif aggregate >= 60 and aggregate < 75:
+    print("First Division")
+elif aggregate >= 50 and aggregate < 60:
+    print("Second Division")
+elif aggregate >= 40 and aggregate < 50:
+    print("Third Division")
+else:
+    print("Fail")
